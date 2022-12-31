@@ -37,7 +37,7 @@ const Sport = ({navigation}) =>{
                 <View style={styles.mand}><Image style={styles.pic} source={require("../assets/6011.png")}></Image></View>
                 <Text style={styles.aantal}>{pressCounter}</Text>
             </View>
-            <FlatList data ={Sport} renderItem={({item}) => (
+            <FlatList style={styles.posts} data ={Sport} renderItem={({item}) => (
                 
                 <View style={styles.container}>
                     
@@ -56,7 +56,7 @@ const Sport = ({navigation}) =>{
                     
                 </View >
                     <View style={styles.btns}>
-                        <Pressable style={styles.btn} onPress={()=>navigation.navigate("Details", {itemTitle: item.title.rendered, itemDescription:item.rttpg_excerpt})}>
+                        <Pressable style={styles.btn} onPress={()=>navigation.navigate("Details", {itemTitle: item.title.rendered, itemDescription:item.rttpg_excerpt, itemImage: item.yoast_head_json.og_image[0].url})}>
                             <Text>Details</Text>
                         </Pressable>
                         <TouchableOpacity activeOpacity={0.4} onPress={pressHandler}><Text style={styles.btn}>Koop ticket</Text></TouchableOpacity>
@@ -70,14 +70,21 @@ const Sport = ({navigation}) =>{
 
 }
 const styles = StyleSheet.create({
+    posts:{
+        marginBottom:75,
+        
+    },
+
     bg:{
         backgroundColor: '#A9DAFF',
+        
     },
     mand:{
         flexDirection:"row",
         justifyContent:"flex-end",
         paddingRight:40,
         paddingTop:15,
+        marginBottom:20,
         
     },
     pic:{
@@ -93,9 +100,11 @@ const styles = StyleSheet.create({
     },
     container: {
         backgroundColor: '#E2F3FF',
-        margin: 30,
-        marginBottom:-15,
-        paddingTop: 30,
+        marginTop: 10,
+        marginLeft:30,
+        marginRight:30,
+        marginBottom:20,
+        paddingTop:30,
         borderRadius: 8,
     },
     title:{
