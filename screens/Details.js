@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Stylesheet, Text, View, Image, TextInput, Pressable, FlatList} from 'react-native';
+import {StyleSheet, Text, View, Image, TextInput, Pressable, FlatList} from 'react-native';
 import Detail from '../components/SportDetails';
 
 const Details = ({navigation, route}) =>{
@@ -10,7 +10,7 @@ const Details = ({navigation, route}) =>{
             <Detail 
             title={route.params.itemTitle}
             description={route.params.itemDescription}
-
+            image={route.params.itemImage}
             />
         </View>
     );
