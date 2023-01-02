@@ -16,7 +16,9 @@ const Zoekbalk = ({data, input, setInput, navigation}) => {
             <Text style={styles.aantal}>{pressCounter}</Text>
         
         
-        <FlatList data={data} renderItem={({item})=>{
+        <FlatList data={data} 
+        ListFooterComponent={<View style={{height:370}}></View>} 
+        renderItem={({item})=>{
             
                 
             
@@ -91,10 +93,6 @@ const Zoekbalk = ({data, input, setInput, navigation}) => {
 export default Zoekbalk
 
 const styles = StyleSheet.create({
-    posts:{
-        marginBottom:75,
-        
-    },
 
     mand:{
         flexDirection:"row",
