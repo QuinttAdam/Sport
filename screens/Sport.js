@@ -54,7 +54,7 @@ const Sport = ({navigation}) =>{
 const styles = StyleSheet.create({
     bg:{
         backgroundColor: '#A9DAFF',
-        paddingBottom:150,
+        // paddingBottom:,
     },
     inputveld:{
         position:'absolute',
