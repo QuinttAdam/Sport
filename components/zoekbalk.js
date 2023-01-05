@@ -14,16 +14,19 @@ const Zoekbalk = ({data, input, setInput, navigation}) => {
         <View>
             <View style={styles.mand}><Image style={styles.pic} source={require("../assets/6011.png")}></Image></View>
             <Text style={styles.aantal}>{pressCounter}</Text>
+
+            <Pressable style={styles.fav} onPress={()=>navigation.navigate("Favourite Sports")}>
+                <Text style={styles.favtext} >Your favourite sports</Text>
+            </Pressable>
         
-        
-        <FlatList data={data} 
-        ListFooterComponent={<View style={{height:370}}></View>} 
-        renderItem={({item})=>{
+            <FlatList data={data} 
+            ListFooterComponent={<View style={{height:370}}></View>} 
+            renderItem={({item})=>{
             
                 
             
             if(input===""){
-                console.log("bert");
+                // console.log("bert");
                 return(
                     
                     <View style={styles.container}>
@@ -112,6 +115,21 @@ const styles = StyleSheet.create({
         right: 30,
         top:50,
         fontSize: 18,
+    },
+    fav:{
+        backgroundColor:"#E2F3FF",
+        borderWidth:1,
+        marginLeft:30,
+        marginRight:30,
+        marginTop:20,
+        marginBottom:20,
+        padding:20,
+        alignItems:'center',
+        borderRadius:20,
+    },
+    favtext:{
+        fontSize:20,
+        fontWeight:'bold',
     },
     container: {
         backgroundColor: '#E2F3FF',
