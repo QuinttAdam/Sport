@@ -33,7 +33,7 @@ const Sport = ({navigation}) =>{
             <View >
                 <TextInput
                     value={input}
-                    placeholder="search sport"
+                    placeholder="Search sport"
                     onChangeText={(text)=> setInput(text)}
                     style={styles.inputveld}
                 />
