@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Sport from './screens/Sport';
 import Details from './screens/Details';
+import FavSports from './screens/FavSports';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -15,6 +16,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Sport" component={Sport}/>  
         <Stack.Screen name="Details" component={Details}/>  
+        <Stack.Screen name="Favourite Sports" component={FavSports}/>  
       </Stack.Navigator>
     </NavigationContainer>
   );
