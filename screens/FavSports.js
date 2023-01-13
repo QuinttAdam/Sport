@@ -5,16 +5,17 @@ const FavSports=({navigation})=>{
 
     let sports=[]
     const [enteredSport, setEnteredSport]= useState('');
-    const [Sports, setSports]= useState(sports);
 
+    const [Sports, setSports]= useState(sports);
     const SportNameHandler = (enteredText) => {
-        // console.log(enteredText)
         setEnteredSport(enteredText);
     }
+
     const [enteredDescription, setEnteredDescription]= useState('');
     const SportDescriptionHandler = (enteredText) => {
         setEnteredDescription(enteredText);
     }
+    
     const addSportHandler = () => {
         let newSport = { name: enteredSport, description: enteredDescription };
     
@@ -25,7 +26,7 @@ const FavSports=({navigation})=>{
     
         setSports((sports) => [...sports, modifiedObj]);
       };
-// console.log(enteredSport)
+
 
     
     
