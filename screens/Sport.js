@@ -78,7 +78,7 @@ const Sport = ({ navigation }) => {
 
       <FlatList
         data={Sport}
-        ListFooterComponent={<View style={{ height: 280 }}></View>}
+        ListFooterComponent={<View style={{ height: 50 }}></View>}
         renderItem={({ item }) => (
           <View style={styles.container}>
             <View style={styles.sporttitle}>
@@ -119,6 +119,7 @@ const Sport = ({ navigation }) => {
 const styles = StyleSheet.create({
   bg: {
     backgroundColor: "#A9DAFF",
+    height:810,
   },
   inputveld: {
     marginRight: 30,
